@@ -1,0 +1,53 @@
+body{
+    margin: 0; 
+    padding: 0; 
+    background-color: lightblue;
+    min-height: 100vh;
+
+    display: grid; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 2fr 3fr;
+}
+header {
+    grid-column: span 2;
+    background-color: lightcyan;
+    height: 30px; 
+}
+aside {
+    background-color: lightpink;
+}
+main {
+    background-color: azure;
+}
+footer {
+    background-color: green;
+    grid-column: 1 / 3;
+    height: 30px;
+}
+
+.keyboard-container{
+    background-color: lightgrey;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    
+  
+} 
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+
+.key {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px; 
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
