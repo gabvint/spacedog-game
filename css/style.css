@@ -28,12 +28,11 @@ footer {
 .keyboard-container{
     background-color: lightgrey;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 55%;
+    left: 50%;
     padding: 30px;
     border-radius: 10px;
     
-  
 } 
 .row {
     display: flex;
@@ -51,3 +50,11 @@ footer {
     font-size: 20px;
 }
 
+.word{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    
+}
