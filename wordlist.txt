@@ -1,40 +1,20 @@
-NEBULA
-Hint: Cloud of gas and dust in space.
-GALAXY
-Hint: Massive system of stars, planets, and other celestial bodies.
-COMET
-Hint: Icy body that releases gas and dust, forming a tail.
-METEOR
-Hint: Space rock that burns up in Earth's atmosphere.
-ASTEROID
-Hint: Small rocky body orbiting the sun.
-BLACKHOLE
-Hint: Region of space with strong gravitational pull, nothing can escape.
-EXOPLANET
-Hint: Planet outside our solar system.
-SUPERNOVA
-Hint: Explosive death of a star.
-QUASAR
-Hint: Extremely bright and distant active galactic nucleus.
-COSMOS
-Hint: The universe seen as a well-ordered whole.
-SATELLITE
-Hint: Man-made object orbiting a planet.
-ORBIT
-Hint: Path of a celestial body around a star, planet, or moon.
-SPACESUIT
-Hint: Worn by astronauts to survive in space.
-LIGHTYEAR
-Hint: Distance light travels in one year.
-WORMHOLE
-Hint: Theoretical passage through space-time.
-ASTROLABE
-Hint: Ancient instrument used to observe and calculate the position of celestial bodies.
-PULSAR
-Hint: Highly magnetized, rotating neutron star that emits beams of electromagnetic radiation.
-ANDROMEDA
-Hint: Nearest spiral galaxy to the Milky Way.
-SOLARFLARE
-Hint: Sudden burst of radiation from the sun's surface.
-TELESCOPE
-Hint: Instrument used to observe distant objects in space.
+NEBULA | Hint: Cloud of gas and dust in space.
+GALAXY | Hint: Massive system of stars, planets, and other celestial bodies.
+COMET  | Hint: Icy body that releases gas and dust, forming a tail.
+METEOR | Hint: Space rock that burns up in Earth's atmosphere.
+ASTEROID | Hint: Small rocky body orbiting the sun.
+BLACKHOLE | Hint: Region of space with strong gravitational pull, nothing can escape.
+EXOPLANET | Hint: Planet outside our solar system.
+SUPERNOVA | Hint: Explosive death of a star.
+QUASAR | Hint: Extremely bright and distant active galactic nucleus.
+COSMOS | Hint: The universe seen as a well-ordered whole.
+SATELLITE | Hint: Man-made object orbiting a planet.
+ORBIT | Hint: Path of a celestial body around a star, planet, or moon.
+SPACESUIT | Hint: Worn by astronauts to survive in space.
+LIGHTYEAR | Hint: Distance light travels in one year.
+WORMHOLE | Hint: Theoretical passage through space-time.
+ASTROLABE | Hint: Ancient instrument used to observe and calculate the position of celestial bodies.
+PULSAR | Hint: Highly magnetized, rotating neutron star that emits beams of electromagnetic radiation.
+ANDROMEDA | Hint: Nearest spiral galaxy to the Milky Way.
+SOLARFLARE | Hint: Sudden burst of radiation from the sun's surface.
+TELESCOPE | Hint: Instrument used to observe distant objects in space.

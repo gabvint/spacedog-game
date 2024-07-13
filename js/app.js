@@ -31,9 +31,17 @@ let playerLost
 
 async function init (){
 
-    hiddenWord = await getHiddenWords(); 
+    let stringFromFile = await getArrayOfWords()
+    let parts = stringFromFile.split('|')
+
+    hiddenWord = parts[0].trim()
+
     console.log(hiddenWord)
-   // hint = getHint();   
+
+    hint = parts[1].trim()
+
+    console.log(hint) 
+    
     playerChances = max_chances
     playerLost = false
 }
@@ -42,16 +50,14 @@ async function getArrayOfWords() {
 
     const fs = require('fs').promises; 
     let index; 
-
     try {
 
         let data = await fs.readFile('wordlist.txt', 'utf8');
 
         const wordsArray = data.split('\n') //makes it to an array
-        
-        //index = Math.floor( Math.random() * wordsArray.length / 2 ) * 2;
+        index = Math.floor( Math.random() * wordsArray.length)
 
-        return wordsArray
+        return wordsArray[index]
 
     } catch (err) {
         console.log("error");
@@ -59,25 +65,10 @@ async function getArrayOfWords() {
 
 }
 
-async function getHiddenWords(){
-
-    let wordArray = await getArrayOfWords()
-    let index = Math.floor( Math.random() * wordArray.length / 2 ) * 2
-
-    return wordArray[index]
-
-}
-
-async function getHint(){
-    
-}
-// const getHint = () => {
-
-// }
 
 /*----------- Event Listeners ----------*/
 
-//init()
+init()
 
 
 
