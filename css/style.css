@@ -58,3 +58,9 @@ footer {
     margin-top: 150px;
     
 }
+.hint {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
