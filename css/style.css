@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0; 
     padding: 0; 
@@ -20,7 +22,7 @@ header {
 
 }
 aside {
-    background-color: transparent !important;
+    background-color:  transparent !important;
 }
 main {
     background-color: transparent !important;;
@@ -62,7 +64,10 @@ footer {
     outline: none;
     border: none;
     font-size: 20px;
+
+  
 }
+
 
 .word{
     font-size: 40px;
@@ -89,6 +94,22 @@ footer {
     right: 20%;
 }
 
+
+.dogImg {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    left: 9%;
+
+}
+
+.alienImg {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+}
 
 /* modals */
 

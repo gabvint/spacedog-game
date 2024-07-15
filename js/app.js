@@ -45,7 +45,8 @@ const keysEls = document.querySelectorAll('.key')
 const wordEls = document.querySelector('#guess-word')
 const hintEls = document.querySelector('#word-hint')
 const chancesEls = document.querySelector('#chances-count')
-
+const dogImg = document.getElementById('dog-img')
+//modals
 const modal = document.querySelector(".modal")
 const overlay = document.querySelector(".overlay")
 const openModalBtn = document.querySelector(".btn-open")
@@ -120,7 +121,6 @@ function handleClick(event){
             console.log(playerChances)
         }
            
-      
     
     console.log(playerChoice)
 
@@ -141,7 +141,7 @@ function checkWin (){
 
 function checkChances(){
     if (playerChances === 1){
-        hint = warning_message
+        dogImg.src = './img/hondachance.png'
     }
 }
 
