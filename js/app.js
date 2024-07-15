@@ -46,10 +46,23 @@ const wordEls = document.querySelector('#guess-word')
 const hintEls = document.querySelector('#word-hint')
 const chancesEls = document.querySelector('#chances-count')
 
+const modal = document.querySelector(".modal")
+const overlay = document.querySelector(".overlay")
+const openModalBtn = document.querySelector(".btn-open")
+const closeModalBtn = document.querySelector(".btn-close")
 
 
 // /*-------------- Functions -------------*/
 
+
+const openHowToModal = function () {
+    modal.classList.remove("hidden")
+    overlay.classList.remove("hidden")
+}
+const closeHowToModal = function() {
+    modal.classList.add("hidden")
+    overlay.classList.add("hidden")
+}
  function init(){
 
     let stringFromFile =  getArrayOfWords(wordlist) 
@@ -141,6 +154,9 @@ keysEls.forEach(key => {
     key.addEventListener('click', handleClick);
 })
 
+openModalBtn.addEventListener('click', openHowToModal);
+closeModalBtn.addEventListener('click', closeHowToModal);
+overlay.addEventListener('click', closeHowToModal);
 
 // console.dir(keyboard)
 // console.dir(letter)

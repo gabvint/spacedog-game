@@ -5,6 +5,11 @@ In Spacedog, players must prevent a dog from being abducted by aliens. The objec
 ## SCREENSHOTS 
 
 ## TECHNOLOGIES USED 
+- HTML
+- CSS
+- JavaScripy 
 
 ## GETTING STARTED 
+
+
 
