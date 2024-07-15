@@ -2,7 +2,7 @@
 /*-------------- Constants -------------*/
 const warning_message = 'Arf, 1 chance left'
 const win_message = "Hey, you won!"
-const lost_message = "Awww"
+const lost_message = "You lost!"
 const max_chances = 5
 
 
@@ -31,9 +31,9 @@ const wordlist = [
 /*---------- Variables (state) ---------*/
 
 let hiddenWord
-let guessedWord
+let guessedWord = []
 let hint
-let playerChoice 
+let playerChoice
 let playerChances 
 let playerLost
 
@@ -42,20 +42,14 @@ let playerLost
 
 
 const keysEls = document.querySelectorAll('.key')
-const keyboardEls = document.querySelectorAll('#keyboard')
 const wordEls = document.querySelector('#guess-word')
 const hintEls = document.querySelector('#word-hint')
 
-keysEls.forEach(key => {
-    key.addEventListener('click', (event) =>{
-        console.log(event.target.id)
-    })
-})
 
 
 // /*-------------- Functions -------------*/
 
- function init (){
+ function init(){
 
     let stringFromFile =  getArrayOfWords(wordlist) 
     // splits the string into 2 and removes |
@@ -64,33 +58,86 @@ keysEls.forEach(key => {
     // assigns word and hint and removes the whitespace
     hiddenWord = parts[0].trim()
     hint = parts[1].trim()
-    guessedWord = "_ ".repeat(hiddenWord.length)
+
+    //initialize guessWord with underlines
+    for (let i = 0; i < hiddenWord.length; i++){
+        guessedWord[i] = "_";
+    }
+
     console.log(guessedWord.length)
     console.log(hiddenWord)
     console.log(hint)
+
     playerChances = max_chances
     playerLost = false
 
     render()
 }
 
-function getArrayOfWords(wordlist) {
+
+// computes a random number from 0 to wordList.length - 1 and retuns a random string fr wordlist
+function getArrayOfWords(wordlist){
     return wordlist[Math.floor(Math.random() * wordlist.length)]
 }
 
 
 function render(){
-    wordEls.textContent = guessedWord
+    wordEls.textContent = guessedWord.join(' ')
     hintEls.textContent = hint
 }
- 
+  
 
+function handleClick(event){
+
+    playerChoice = event.target.id
+
+        if (hiddenWord.includes(playerChoice)){
+
+            hiddenWord.split('').forEach((letter, idx) => {
+                if (letter === playerChoice){
+                    guessedWord[idx] = playerChoice
+                }
+            });
+        } 
+        else{
+            
+            playerChances -= 1
+            console.log(playerChances)
+        }
+           
+      
+    
+    console.log(playerChoice)
+
+    checkWin()
+    checkChances()
+    render()
+
+}
+
+//hint for temporary use only
+function checkWin (){
+    if (playerChances === 0 && hiddenWord !== guessedWord){
+        hint = lost_message
+    } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
+        hint = win_message
+    }
+}
+
+function checkChances(){
+    if (playerChances === 1){
+        hint = warning_message
+    }
+}
 
 
 /*----------- Event Listeners ----------*/
 
 init()
 
+keysEls.forEach(key => {
+    key.addEventListener('click', handleClick);
+})
 
 
 // console.dir(keyboard)
