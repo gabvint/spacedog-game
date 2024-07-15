@@ -44,6 +44,7 @@ let playerLost
 const keysEls = document.querySelectorAll('.key')
 const wordEls = document.querySelector('#guess-word')
 const hintEls = document.querySelector('#word-hint')
+const chancesEls = document.querySelector('#chances-count')
 
 
 
@@ -64,9 +65,9 @@ const hintEls = document.querySelector('#word-hint')
         guessedWord[i] = "_";
     }
 
-    console.log(guessedWord.length)
-    console.log(hiddenWord)
-    console.log(hint)
+    // console.log(guessedWord.length)
+    // console.log(hiddenWord)
+    // console.log(hint)
 
     playerChances = max_chances
     playerLost = false
@@ -84,6 +85,7 @@ function getArrayOfWords(wordlist){
 function render(){
     wordEls.textContent = guessedWord.join(' ')
     hintEls.textContent = hint
+    chancesEls.textContent = `Chances: ${playerChances}/${max_chances}`
 }
   
 
