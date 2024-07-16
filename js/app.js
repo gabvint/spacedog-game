@@ -7,25 +7,25 @@ const max_chances = 5
 
 
 const wordlist = [
-'nebula | Hint: Cloud of gas and dust in space.',
-'galaxy | Hint: Massive system of stars, planets, and other celestial bodies.',
-'comet  | Hint: Icy body that releases gas and dust, forming a tail.',
-'meteor | Hint: Space rock that burns up in Earth\'s atmosphere.',
-'asteroid | Hint: Small rocky body orbiting the sun.',
-'blackhole | Hint: Region of space with strong gravitational pull, nothing can escape.',
-'exoplanet | Hint: Planet outside our solar system.',
-'supernova | Hint: Explosive death of a star.',
-'quasar | Hint: Extremely bright and distant active galactic nucleus.',
-'cosmos | Hint: The universe seen as a well-ordered whole.',
-'satellite | Hint: Man-made object orbiting a planet.',
-'orbit | Hint: Path of a celestial body around a star, planet, or moon.',
-'spacesuit | Hint: Worn by astronauts to survive in space.',
-'lightyear | Hint: Distance light travels in one year.',
-'astrolabe | Hint: Ancient instrument used to observe and calculate the position of celestial bodies.',
-'pulsar | Hint: Highly magnetized, rotating neutron star that emits beams of electromagnetic radiation.',
-'andromeda | Hint: Nearest spiral galaxy to the Milky Way.',
-'solarflare | Hint: Sudden burst of radiation from the sun\'s surface.',
-'telescope | Hint: Instrument used to observe distant objects in space.'
+'nebula | Cloud of gas and dust in space.',
+'galaxy | Massive system of stars, planets, and other celestial bodies.',
+'comet  | Icy body that releases gas and dust, forming a tail.',
+'meteor | Space rock that burns up in Earth\'s atmosphere.',
+'asteroid | Small rocky body orbiting the sun.',
+'blackhole | Region of space with strong gravitational pull, nothing can escape.',
+'exoplanet | Planet outside our solar system.',
+'supernova | Explosive death of a star.',
+'quasar | Extremely bright and distant active galactic nucleus.',
+'cosmos | The universe seen as a well-ordered whole.',
+'satellite | Man-made object orbiting a planet.',
+'orbit | Path of a celestial body around a star, planet, or moon.',
+'spacesuit | Worn by astronauts to survive in space.',
+'lightyear | Distance light travels in one year.',
+'astrolabe | Ancient instrument used to observe and calculate the position of celestial bodies.',
+'pulsar | Highly magnetized, rotating neutron star that emits beams of electromagnetic radiation.',
+'andromeda | Nearest spiral galaxy to the Milky Way.',
+'solarflare | Sudden burst of radiation from the sun\'s surface.',
+'telescope | Instrument used to observe distant objects in space.'
 ]
 
 /*---------- Variables (state) ---------*/
