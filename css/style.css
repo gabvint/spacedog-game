@@ -109,6 +109,7 @@ footer {
     width: 350px;
     height: 350px;
     position: absolute;
+    display: none;
 }
 
 /* modals */
@@ -125,23 +126,33 @@ footer {
     position: absolute;
     top: 25%;
     left: 30%;
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: black;
+    border: 10px solid #7E2178;
     border-radius: 15px;
     z-index: 2;
+
 }
 
+.modalImg{
+    width: 150px; 
+    height: 150px;
+}
 .modal .flex{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
+}
+
+.modal h1 {
+    color: white;
 }
 
 .modal p {
     font-size: 15px;
-    color: #777;
-  }
+    color: white;
+}
+
   
 .x-btn {
 cursor: pointer;
@@ -162,7 +173,6 @@ font-size: 1em;
   
 .btn-open {
 position: absolute;
-
 }
 
 .btn-close {
@@ -170,6 +180,11 @@ transform: translate(10px, -20px);
 padding: 0.5rem 0.7rem;
 background: #eee;
 border-radius: 50%;
+}
+
+.btn-close:hover{
+    background-color: #7E2178;
+    
 }
 
 .overlay {

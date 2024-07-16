@@ -46,6 +46,7 @@ const wordEls = document.querySelector('#guess-word')
 const hintEls = document.querySelector('#word-hint')
 const chancesEls = document.querySelector('#chances-count')
 const dogImg = document.getElementById('dog-img')
+const alienImg = document.getElementById('alien-img')
 //modals
 const modal = document.querySelector(".modal")
 const overlay = document.querySelector(".overlay")
@@ -56,14 +57,6 @@ const closeModalBtn = document.querySelector(".btn-close")
 // /*-------------- Functions -------------*/
 
 
-const openHowToModal = function () {
-    modal.classList.remove("hidden")
-    overlay.classList.remove("hidden")
-}
-const closeHowToModal = function() {
-    modal.classList.add("hidden")
-    overlay.classList.add("hidden")
-}
  function init(){
 
     let stringFromFile =  getArrayOfWords(wordlist) 
@@ -80,7 +73,7 @@ const closeHowToModal = function() {
     }
 
     // console.log(guessedWord.length)
-    // console.log(hiddenWord)
+    console.log(hiddenWord)
     // console.log(hint)
 
     playerChances = max_chances
@@ -124,8 +117,8 @@ function handleClick(event){
     
     console.log(playerChoice)
 
-    checkWin()
     checkChances()
+    checkWin()
     render()
 
 }
@@ -135,16 +128,27 @@ function checkWin (){
     if (playerChances === 0 && hiddenWord !== guessedWord){
         hint = lost_message
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
-        hint = win_message
+       dogImg.src = './img/hondawin.png'
+       alienImg.style.display = 'none'
     }
 }
 
 function checkChances(){
     if (playerChances === 1){
         dogImg.src = './img/hondachance.png'
-    }
+        alienImg.style.display = 'block'
+    } 
 }
 
+
+const openHowToModal = function () {
+    modal.classList.remove("hidden")
+    overlay.classList.remove("hidden")
+}
+const closeHowToModal = function() {
+    modal.classList.add("hidden")
+    overlay.classList.add("hidden")
+}
 
 /*----------- Event Listeners ----------*/
 
