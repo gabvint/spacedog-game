@@ -48,13 +48,17 @@ const chancesEls = document.querySelector('#chances-count')
 const dogImg = document.getElementById('dog-img')
 const alienImg = document.getElementById('alien-img')
 const statusImg = document.getElementById('status-img')
+const resetEls = document.getElementById('reset-btn')
+
 //modals
+
 const modal = document.querySelector(".modal")
 const overlay = document.querySelector(".overlay")
 const openModalBtn = document.querySelector(".btn-open")
 const closeModalBtn = document.querySelector(".btn-close")
 const statusModal = document.querySelector(".status-modal")
 const statusMessage = document.querySelector(".status-msg")
+
 
 
 
@@ -103,9 +107,14 @@ function render(){
 function handleClick(event){
 
     playerChoice = event.target.id
+    event.target.classList.add("key-clicked")
 
+        // if the key clicked is equal to any char in the hiddenWord
         if (hiddenWord.includes(playerChoice)){
 
+            // hidden word will turn into an array of indivual characters and 
+            // will loop through the individual characters until it finds one
+            // that matches the key pressed
             hiddenWord.split('').forEach((letter, idx) => {
                 if (letter === playerChoice){
                     guessedWord[idx] = playerChoice
@@ -113,7 +122,7 @@ function handleClick(event){
             });
         } 
         else{
-            
+            // playerchances will be decremented 
             playerChances -= 1
             console.log(playerChances)
         }
@@ -132,21 +141,41 @@ function checkWin (){
     if (playerChances === 0 && hiddenWord !== guessedWord){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
-        statusMessage.textContent = lost_message
         statusImg.src = "./img/hondacrying.png"
+        statusMessage.textContent = lost_message
 
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
-       dogImg.src = './img/hondawin.png'
-       alienImg.style.display = 'none'
-       statusMessage.textContent = win_message
+        statusModal.classList.remove("hide-status")
+        overlay.classList.remove("hidden")
+        dogImg.src = './img/hondawin.png'
+        alienImg.style.display = 'none'
+        statusMessage.textContent = win_message
     }
 }
 
 function checkChances(){
+
     if (playerChances === 1){
-        dogImg.src = './img/hondachance.png'
-        alienImg.style.display = 'block'
+        dogImg.src = './img/hondachance.png' // Honda's warning image 
+        alienImg.style.display = 'block' // alienship will appear 
     } 
+}
+
+function resetGame(){
+
+    init() // initalizes the game
+
+    keysEls.forEach(key => { //removes the color of the keys
+        key.classList.remove("key-clicked")
+    })
+
+
+    //reverts back to the original state
+    dogImg.src = './img/honda.png'
+    alienImg.style.display = 'none'
+    statusModal.classList.add("hide-status")
+    overlay.classList.add("hidden")
+
 }
 
 
@@ -169,11 +198,6 @@ keysEls.forEach(key => {
 
 openModalBtn.addEventListener('click', openHowToModal);
 closeModalBtn.addEventListener('click', closeHowToModal);
-
-
-// console.dir(keyboard)
-// console.dir(letter)
-
-
+resetEls.addEventListener('click', resetGame);
 
 
