@@ -13,6 +13,7 @@ body{
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 2fr 3fr;
     font-family: "Crafty Girls", cursive;
+
 }
 header {
     grid-column: span 2;
@@ -118,15 +119,15 @@ footer {
 .modal{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     gap: 0.4rem;
     width: 550px;
-    padding: 1.3rem;
-    min-height: 300px;
-    position: absolute;
-    top: 25%;
-    left: 30%;
+    padding: 1rem;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: black;
     border: 10px solid #7E2178;
     border-radius: 15px;
@@ -137,12 +138,12 @@ footer {
 .modalImg{
     width: 150px; 
     height: 150px;
+    
 }
 .modal .flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .modal .title {
@@ -157,37 +158,38 @@ footer {
 
   
 .x-btn {
-cursor: pointer;
-border: none;
-font-weight: 500;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
 }
   
 .btn {
-display: inline-block;
-padding: 0.8rem 1.4rem;
-font-weight: 700;
-background-color: black;
-color: white;
-border-radius: 5px;
-text-align: center;
-font-size: 1em;
-margin-top: 10px;
-margin-right: 10px;
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: "Crafty Girls", cursive;
 }
 
 .btn:hover{
-background-color: #7E2178;
+    background-color: #7E2178;
 }
   
 .btn-open {
-position: absolute;
+    position: absolute;
 }
 
 .btn-close {
-transform: translate(10px, -20px);
-padding: 0.5rem 0.7rem;
-background: #eee;
-border-radius: 50%;
+    transform: translate(10px, -20px);
+    padding: 0.5rem 0.7rem;
+    background: #eee;
+    border-radius: 50%;
 }
 
 .overlay {
@@ -204,6 +206,56 @@ border-radius: 50%;
   }
 
 
-  .hidden {
+  .hidden{
     display: none;
+  }
+
+
+  .status-modal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1rem;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 10px solid #FE5069;
+    border-radius: 15px;
+    z-index: 2;
+  }
+
+  .status-modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .status-msg {
+    color: white;
+    font-size: 35px;
+  }
+  .message {
+    color: white;
+    font-size: 25px;
+  }
+
+  .hide-status{
+    display: none;
+  }
+
+  .resetBtn {
+    margin-top: 10px;
+    font-family: "Crafty Girls", cursive;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+
+  .resetBtn:hover {
+    color: white;
+    background-color: #FE5069;
   }

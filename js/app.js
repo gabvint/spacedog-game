@@ -1,8 +1,8 @@
 
 /*-------------- Constants -------------*/
 const warning_message = 'Arf, 1 chance left'
-const win_message = "Hey, you won!"
-const lost_message = "You lost!"
+const win_message = "Yay! You saved Honda"
+const lost_message = "Oh no! Honda has been abducted"
 const max_chances = 5
 
 
@@ -47,11 +47,15 @@ const hintEls = document.querySelector('#word-hint')
 const chancesEls = document.querySelector('#chances-count')
 const dogImg = document.getElementById('dog-img')
 const alienImg = document.getElementById('alien-img')
+const statusImg = document.getElementById('status-img')
 //modals
 const modal = document.querySelector(".modal")
 const overlay = document.querySelector(".overlay")
 const openModalBtn = document.querySelector(".btn-open")
 const closeModalBtn = document.querySelector(".btn-close")
+const statusModal = document.querySelector(".status-modal")
+const statusMessage = document.querySelector(".status-msg")
+
 
 
 // /*-------------- Functions -------------*/
@@ -126,10 +130,15 @@ function handleClick(event){
 //hint for temporary use only
 function checkWin (){
     if (playerChances === 0 && hiddenWord !== guessedWord){
-        hint = lost_message
+        statusModal.classList.remove("hide-status")
+        overlay.classList.remove("hidden")
+        statusMessage.textContent = lost_message
+        statusImg.src = "./img/hondacrying.png"
+
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
        dogImg.src = './img/hondawin.png'
        alienImg.style.display = 'none'
+       statusMessage.textContent = win_message
     }
 }
 
@@ -160,7 +169,7 @@ keysEls.forEach(key => {
 
 openModalBtn.addEventListener('click', openHowToModal);
 closeModalBtn.addEventListener('click', closeHowToModal);
-overlay.addEventListener('click', closeHowToModal);
+
 
 // console.dir(keyboard)
 // console.dir(letter)
