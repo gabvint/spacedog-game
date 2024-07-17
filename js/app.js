@@ -36,7 +36,11 @@ let playerChoice
 let playerChances 
 let playerLost
 
-let losebark = new Audio("./audio/losebark.mp3")
+// audio effects
+let warningBark = new Audio("./audio/warning.mp3")
+let gameover = new Audio("./audio/aliencoming.mp3")
+let wingame = new Audio("./audio/winsgame.mp3")
+let buttonclick = new Audio("./audio/buttonclick.mp3")
 
 /*----- Cached Element References  -----*/
 
@@ -108,6 +112,7 @@ function handleClick(event){
 
     playerChoice = event.target.id
     event.target.classList.add("key-clicked")
+    buttonclick.play()
 
         // if the key clicked is equal to any char in the hiddenWord
         if (hiddenWord.includes(playerChoice)){
@@ -144,7 +149,7 @@ function checkWin (){
         overlay.classList.remove("hidden")
         statusImg.src = "./img/hondacrying.png"
         statusMessage.textContent = lost_message
-        losebark.play()
+        gameover.play()
 
     // player win
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
@@ -153,6 +158,7 @@ function checkWin (){
         dogImg.src = './img/hondawin.png'
         alienImg.style.display = 'none'
         statusMessage.textContent = win_message
+        wingame.play()
     }
 }
 
@@ -161,12 +167,14 @@ function checkChances(){
     if (playerChances === 1){
         dogImg.src = './img/hondachance.png' // Honda's warning image 
         alienImg.style.display = 'block' // alienship will appear 
+        warningBark.play()
     } 
 }
 
 function resetGame(){
 
-    guessedWord = []
+
+    guessedWord = [] // initializing into empty array again to avoid overlapping fr prev word
 
     init() // initalizes the game
 
@@ -174,12 +182,12 @@ function resetGame(){
         key.classList.remove("key-clicked")
     })
 
-
     //reverts back to the original state
     dogImg.src = './img/honda.png'
     alienImg.style.display = 'none'
     statusModal.classList.add("hide-status")
     overlay.classList.add("hidden")
+    gameover.pause()
 
 }
 
