@@ -81,6 +81,14 @@ footer {
     color: white;
 }
 
+.jump {
+    transition: transform 0.1s ease-in-out;
+  }
+  
+.jump:hover {   
+    transform: translateY(-8px) scale(1.1);
+}
+
 .word{
     font-size: 40px;
     display: flex;
