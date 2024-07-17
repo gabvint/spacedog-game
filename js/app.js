@@ -1,6 +1,5 @@
 
 /*-------------- Constants -------------*/
-const warning_message = 'Arf, 1 chance left'
 const win_message = "Yay! You saved Honda"
 const lost_message = "Oh no! Honda has been abducted"
 const max_chances = 5
@@ -37,6 +36,7 @@ let playerChoice
 let playerChances 
 let playerLost
 
+let losebark = new Audio("./audio/losebark.mp3")
 
 /*----- Cached Element References  -----*/
 
@@ -138,12 +138,15 @@ function handleClick(event){
 
 //hint for temporary use only
 function checkWin (){
+    //player loses the game
     if (playerChances === 0 && hiddenWord !== guessedWord){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
         statusImg.src = "./img/hondacrying.png"
         statusMessage.textContent = lost_message
+        losebark.play()
 
+    // player win
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
@@ -162,6 +165,8 @@ function checkChances(){
 }
 
 function resetGame(){
+
+    guessedWord = []
 
     init() // initalizes the game
 
