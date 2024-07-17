@@ -34,13 +34,14 @@ let guessedWord = []
 let hint
 let playerChoice
 let playerChances 
-let playerLost
+let audioHasPlayed
 
 // audio effects
 let warningBark = new Audio("./audio/warning.mp3")
 let gameover = new Audio("./audio/aliencoming.mp3")
 let wingame = new Audio("./audio/winsgame.mp3")
 let buttonclick = new Audio("./audio/buttonclick.mp3")
+let alienenters = new Audio("./audio/alienenters.mp3")
 
 /*----- Cached Element References  -----*/
 
@@ -89,7 +90,8 @@ const statusMessage = document.querySelector(".status-msg")
     // console.log(hint)
 
     playerChances = max_chances
-    playerLost = false
+    // this will be used in the checkChances func, ensures the audio has played only once
+    audioHasPlayed = false 
 
     render()
 }
@@ -143,11 +145,17 @@ function handleClick(event){
 
 //hint for temporary use only
 function checkWin (){
+ 
+    statusModal.classList.add('animate__animated', 'animate__bounceInDown');
+
     //player loses the game
     if (playerChances === 0 && hiddenWord !== guessedWord){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
         statusImg.src = "./img/hondacrying.png"
+        dogImg.src = "./img/honda.png"
+        dogImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
+        alienImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
         statusMessage.textContent = lost_message
         gameover.play()
 
@@ -155,7 +163,6 @@ function checkWin (){
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
-        dogImg.src = './img/hondawin.png'
         alienImg.style.display = 'none'
         statusMessage.textContent = win_message
         wingame.play()
@@ -163,11 +170,17 @@ function checkWin (){
 }
 
 function checkChances(){
-
     if (playerChances === 1){
+
         dogImg.src = './img/hondachance.png' // Honda's warning image 
         alienImg.style.display = 'block' // alienship will appear 
-        warningBark.play()
+
+        if (audioHasPlayed === false){
+            warningBark.play()
+            alienenters.play()
+            audioHasPlayed = true
+        }   
+
     } 
 }
 
@@ -187,6 +200,8 @@ function resetGame(){
     alienImg.style.display = 'none'
     statusModal.classList.add("hide-status")
     overlay.classList.add("hidden")
+    dogImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
+    alienImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
     gameover.pause()
 
 }
@@ -195,6 +210,7 @@ function resetGame(){
 const openHowToModal = function () {
     modal.classList.remove("hidden")
     overlay.classList.remove("hidden")
+    modal.classList.add('animate__animated', 'animate__bounceInDown');
 }
 const closeHowToModal = function() {
     modal.classList.add("hidden")
