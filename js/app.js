@@ -163,6 +163,7 @@ function checkWin (){
     } else if (playerChances > 0 && hiddenWord === guessedWord.join('')){
         statusModal.classList.remove("hide-status")
         overlay.classList.remove("hidden")
+        dogImg.src = "./img/hondawin.png"
         alienImg.style.display = 'none'
         statusMessage.textContent = win_message
         wingame.play()
