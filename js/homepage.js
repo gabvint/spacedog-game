@@ -2,7 +2,7 @@
 
 let backgroundmusic = new Audio("./audio/backgroundmusic.mp3")
 let buttonclick = new Audio("./audio/buttonclick.mp3")
-backgroundmusic.loop = true
+backgroundmusic.loop = true // loops the background music 
 
 /*----- Cached Element References  -----*/
 
@@ -11,13 +11,12 @@ const howToBtn = document.getElementById('how-to-btn')
 
 /*----------- Function ----------*/
 
-function clickSound(){
-    buttonclick.play()
+function playMusic(){
+    backgroundmusic.play()
 }
 
-function changeContent(){
+function changeContent(){ // this function changes the content of the startPageContainer element
     startPageContainer.innerHTML = `
-
 
     <div class="welcome-title">WELCOME TO SPACEDOG</div>
     <div class="instructions">
@@ -41,5 +40,6 @@ function changeContent(){
 }
 /*----------- Event Listeners ----------*/
 
-howToBtn.addEventListener('click', clickSound)
 howToBtn.addEventListener('click', changeContent)
+
+playMusic()
