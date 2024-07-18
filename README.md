@@ -19,6 +19,8 @@ In Spacedog, players must prevent a dog from being abducted by aliens. The objec
 
 ## GETTING STARTED 
 
+Here is the link to play: 
+https://gabvint.github.io/spacedog-game/
 
 
 ## FUTURE PLANS 
