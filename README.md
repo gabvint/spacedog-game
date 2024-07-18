@@ -19,9 +19,14 @@ In Spacedog, players must prevent a dog from being abducted by aliens. The objec
 
 ## GETTING STARTED 
 
+here is the link to play: 
+https://gabvint.github.io/spacedog-game/
+
 
 ## FUTURE PLANS 
 - File Handling for the word lists
 - Player gets to choose difficulty level and theme 
+- Enchance responsiveness for different device sizes
+- Use database to register players and their scores 
 
 
