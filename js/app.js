@@ -42,6 +42,7 @@ let gameover = new Audio("./audio/aliencoming.mp3")
 let wingame = new Audio("./audio/winsgame.mp3")
 let buttonclick = new Audio("./audio/buttonclick.mp3")
 let alienenters = new Audio("./audio/alienenters.mp3")
+let bgmusic = new Audio ("./audio/backgroundmusic.mp3")
 
 /*----- Cached Element References  -----*/
 
@@ -204,6 +205,11 @@ function resetGame(){
 
 }
 
+function playBgMusic(){
+    bgmusic.loop = true 
+    bgmusic.volume = 0.1
+    bgmusic.play()
+}
 
 const openHowToModal = function () {
     modal.classList.remove("hidden")
@@ -219,6 +225,8 @@ const closeHowToModal = function() {
 /*----------- Event Listeners ----------*/
 
 init()
+playBgMusic()
+
 
 keysEls.forEach(key => {
     key.addEventListener('click', handleClick);
