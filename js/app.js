@@ -151,7 +151,7 @@ function checkWin (){
         dogImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
         alienImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
         statusMessage.textContent = lost_message
-        body.style.backgroundImage = 'url(../img/gameoverbg.svg)' 
+        body.style.backgroundImage = 'url(./img/gameoverbg.svg)' 
         gameover.play()
 
     // player win
@@ -198,7 +198,7 @@ function resetGame(){
     overlay.classList.add("hidden")
     dogImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
     alienImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
-    body.style.backgroundImage = 'url(../img/gamebg.svg)' 
+    body.style.backgroundImage = 'url(./img/gamebg.svg)' 
 
     gameover.pause() // immediately stops background music when reset is clicked
 
