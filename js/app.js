@@ -86,10 +86,6 @@ const statusMessage = document.querySelector(".status-msg")
         guessedWord[i] = "_";
     }
 
-    // console.log(guessedWord.length)
-    console.log(hiddenWord)
-    // console.log(hint)
-
     playerChances = max_chances
     // this will be used in the checkChances func, ensures the audio has played only once
     audioHasPlayed = false 
@@ -132,11 +128,8 @@ function handleClick(event){
         else{
             // playerchances will be decremented 
             playerChances -= 1
-            console.log(playerChances)
-        }
            
-    
-    console.log(playerChoice)
+        }
 
     checkChances()
     checkWin()
