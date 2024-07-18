@@ -283,6 +283,8 @@ footer {
     border: none;
     padding: 5px 20px;
     border-radius: 10px;
+    background-color: white;
+    text-decoration: none;
   }
 
   .resetBtn:hover {
