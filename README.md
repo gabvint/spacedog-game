@@ -26,4 +26,3 @@ In Spacedog, players must prevent a dog from being abducted by aliens. The objec
 - Player gets to choose difficulty level and theme 
 
 
-
