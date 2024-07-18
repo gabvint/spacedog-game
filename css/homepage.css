@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Sixtyfour&display=swap');
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+    background-color: black;
+    background: url(../img/night-bg.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-page-container {
+    background-color: black;
+    width: 600px; 
+    min-height: 350px;
+    border-radius: 30px;
+    text-align: center;
+    border: 10px solid #7E2178;
+    font-family: "Sixtyfour", sans-serif;
+}
+
+.title{
+    font-size: 65px;
+    margin-top: 70px;
+    color: white;
+}
+
+.description {
+    font-size: 15px;
+    color: white;
+
+}
+.play-btn{
+    text-decoration: none;
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    font-family: "Sixtyfour", sans-serif;
+    color: black
+}
+
+.play-btn:hover{
+    background-color: #7E2178;
+    color: white;
+    transition: 1s;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-btn {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}

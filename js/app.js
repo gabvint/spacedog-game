@@ -212,6 +212,7 @@ const openHowToModal = function () {
     modal.classList.remove("hidden")
     overlay.classList.remove("hidden")
     modal.classList.add('animate__animated', 'animate__bounceInDown');
+    buttonclick.play()
 }
 const closeHowToModal = function() {
     modal.classList.add("hidden")
