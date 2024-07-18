@@ -1,10 +1,12 @@
 
-
+<div align="center">
 <h2 align="center">
   <a href="https://gabvint.github.io/spacedog-game/"><img src="./img/logo.png" alt="logo" width="400"></a>
     A spaceman inspired game...
 </h2>
-<p align="center">by Gabrielle Tongol</p>
+<a href="https://www.linkedin.com/in/gabtongol128/">by Gabrielle Tongol</a>
+</div>
+
 
 <p align="center">
 “SpaceDog”, inspired by the classic “Spaceman” game. The mechanics will remain the same as the inspired game but spacedog will introduce a theme revolving around aliens and a dog. 
@@ -22,11 +24,17 @@ letter from the keyboard
 <img width="1440" alt="game" src="https://github.com/user-attachments/assets/6654356a-1908-4500-91e2-d8c68c13264e">
 
 ## 🛸 TECHNOLOGIES USED 
-- HTML
-- CSS
-- JavaScript
-- [Animate.css](https://animate.style/)
 
+<div>
+	<code><img width="30" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code>
+	<code><img width="30" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code>
+	<code><img width="30" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript"/></code>
+</div>
+
+<br>
+
+For Animations 
+- [Animate.style](https://animate.style/)
 
 ## 🛸 GETTING STARTED 
 
