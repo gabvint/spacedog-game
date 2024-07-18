@@ -12,7 +12,10 @@ const howToBtn = document.getElementById('how-to-btn')
 /*----------- Function ----------*/
 
 function playMusic(){
-    backgroundmusic.play()
+    backgroundmusic.play().catch(error => {
+        // Handle any errors that occur if the browser blocks autoplay
+        console.log('Autoplay was prevented. User interaction is required to play music.');
+    });
 }
 
 function changeContent(){ // this function changes the content of the startPageContainer element
@@ -37,9 +40,15 @@ function changeContent(){ // this function changes the content of the startPageC
 
     `;
 
+
+
 }
 /*----------- Event Listeners ----------*/
 
 howToBtn.addEventListener('click', changeContent)
+
+//when user clicks anything on homepage music will be played 
+// for some reason when I open live server sometimes it will not be played automatically
+document.addEventListener('click', playMusic)
 
 playMusic()
