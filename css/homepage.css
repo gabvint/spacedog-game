@@ -8,7 +8,7 @@ body {
     margin: 0; 
     padding: 0; 
     background-color: black;
-    background: url(../img/night-bg.png);
+    background: url(../img/homepagebg.svg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -26,6 +26,8 @@ body {
     text-align: center;
     border: 10px solid #7E2178;
     font-family: "Sixtyfour", sans-serif;
+    margin-top: -100px;
+
 }
 
 .main-title{

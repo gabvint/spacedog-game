@@ -9,7 +9,7 @@ body{
     margin: 0; 
     padding: 0; 
     background-color: black;
-    background: url(../img/night-bg.png);
+    background: url(../img/gamebg.svg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -166,7 +166,7 @@ footer {
 }
 
 .txt-style {
-    color: white;
+    color:white;
 }
 .modalImg{
     width: 150px; 
@@ -233,7 +233,7 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(0px);
     z-index: 1;
   }
 

@@ -54,6 +54,7 @@ const dogImg = document.getElementById('dog-img')
 const alienImg = document.getElementById('alien-img')
 const statusImg = document.getElementById('status-img')
 const resetEls = document.getElementById('reset-btn')
+const body = document.querySelector('body')
 
 //modals
 
@@ -157,6 +158,7 @@ function checkWin (){
         dogImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
         alienImg.classList.add('animate__animated', 'animate__fadeOutUpBig')
         statusMessage.textContent = lost_message
+        body.style.backgroundImage = 'url(../img/gameoverbg.svg)' 
         gameover.play()
 
     // player win
@@ -203,7 +205,9 @@ function resetGame(){
     overlay.classList.add("hidden")
     dogImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
     alienImg.classList.remove('animate__animated', 'animate__fadeOutUpBig')
-    gameover.pause()
+    body.style.backgroundImage = 'url(../img/gamebg.svg)' 
+
+    gameover.pause() // immediately stops background music when reset is clicked
 
 }
 
