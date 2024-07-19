@@ -36,6 +36,11 @@ letter from the keyboard
 For Animations 
 - [Animate.style](https://animate.style/)
 
+Some useful links: 
+- [Modal](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
+- [Modal Animations](https://codepen.io/designcouch/pen/obvKxm)
+- [Keyframes CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
+
 ## 🛸 GETTING STARTED 
 
 here is the link to play: 
