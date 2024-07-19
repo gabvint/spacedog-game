@@ -41,7 +41,6 @@ function changeContent(){ // this function changes the content of the startPageC
     `;
 
 
-
 }
 /*----------- Event Listeners ----------*/
 
